@@ -4,19 +4,22 @@ import { Helmet } from "react-helmet";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
+import { content } from "../components/layout.module.css";
 
 const UnsplashImage = () => (
   <div>
     <StaticImage alt="Fresh strawberries" src="../images/strawberries.jpg" />
     <div>
-      Photo by{" "}
-      <a href="https://unsplash.com/@thesollers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-        Anton Darius
-      </a>{" "}
-      on{" "}
-      <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-        Unsplash
-      </a>
+      <span>
+        Photo by{" "}
+        <a href="https://unsplash.com/@thesollers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+          Anton Darius
+        </a>{" "}
+        on{" "}
+        <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+          Unsplash
+        </a>
+      </span>
     </div>
   </div>
 );

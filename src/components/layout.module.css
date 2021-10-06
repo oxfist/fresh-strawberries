@@ -1,3 +1,14 @@
+p,
+a,
+span,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Inter", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+}
+
 .container {
   margin: auto;
   max-width: 500px;
@@ -6,6 +17,7 @@
 
 .heading {
   color: rebeccapurple;
+  font-weight: 600;
 }
 
 .nav-links {
