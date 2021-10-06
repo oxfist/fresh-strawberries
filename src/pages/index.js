@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
-import { content } from "../components/layout.module.css";
 
 const UnsplashImage = () => (
   <div>
