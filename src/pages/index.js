@@ -1,15 +1,14 @@
 import * as React from "react";
-import { Helmet } from "react-helmet";
 
 import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
+import { photoCredits } from "../components/layout.module.css";
 
-const UnsplashImage = () => (
-  <div>
-    <StaticImage alt="Fresh strawberries" src="../images/strawberries.jpg" />
+const UnsplashImage = () => {
+  const PhotoCredits = () => (
     <div>
-      <span>
+      <span className={photoCredits}>
         Photo by{" "}
         <a href="https://unsplash.com/@thesollers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
           Anton Darius
@@ -20,8 +19,15 @@ const UnsplashImage = () => (
         </a>
       </span>
     </div>
-  </div>
-);
+  );
+
+  return (
+    <div>
+      <StaticImage alt="Fresh strawberries" src="../images/strawberries.jpg" />
+      <PhotoCredits />
+    </div>
+  );
+};
 
 const IndexPage = () => {
   return (
