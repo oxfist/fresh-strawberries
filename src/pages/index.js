@@ -26,12 +26,6 @@ const UnsplashImage = () => (
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <meta name="description" content="Gatsby Tutorial" />
-        <link rel="icon" type="image/ico" href="/../images/favicon.ico" />
-        <title>Strawberries!</title>
-      </Helmet>
       <p>I'm making this by following the Gatsby Tutorial.</p>
       <UnsplashImage />
     </Layout>
