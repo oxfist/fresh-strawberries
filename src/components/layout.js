@@ -23,6 +23,11 @@ const NavItems = () => (
           About
         </Link>
       </li>
+      <li className={navLinkItem}>
+        <Link to="/blog" className={navLinkText}>
+          Blog
+        </Link>
+      </li>
     </ul>
   </nav>
 );
@@ -35,19 +40,14 @@ const Layout = ({ pageTitle, children }) => {
           title
         }
       }
-      siteBuildMetadata {
-        buildTime
-      }
     }
   `);
-  console.log(data);
 
   return (
     <div className={container}>
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="description" content="Gatsby Tutorial" />
-        <link rel="icon" type="image/ico" href="/../images/favicon.ico" />
         <title>
           {pageTitle} | {data.site.siteMetadata.title}
         </title>
