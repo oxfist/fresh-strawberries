@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://fresh-strawberries.vercel.app",
-    title: "Strawberries!",
+    title: "Strawberries! 🍓",
   },
   plugins: [
     "gatsby-plugin-image",
