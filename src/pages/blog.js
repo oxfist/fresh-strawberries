@@ -4,13 +4,13 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 
 const BlogPage = ({ data }) => {
-  const files = data.allFile.nodes;
+  const files = data.allMdx.nodes;
 
   return (
-    <Layout pageTitle="My Blog Posts">
+    <Layout pageTitle="Strawberries Posts">
       <ul>
-        {files.map((file) => (
-          <li key={file.name}>{file.name}</li>
+        {files.map(({ id, frontmatter }) => (
+          <li key={id}>{frontmatter.title}</li>
         ))}
       </ul>
     </Layout>
@@ -19,9 +19,14 @@ const BlogPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allFile {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
-        name
+        id
+        frontmatter {
+          title
+          date(formatString: "MMMM D, YYYY")
+        }
+        body
       }
     }
   }
