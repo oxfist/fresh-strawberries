@@ -4,15 +4,16 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 
 const BlogPage = ({ data }) => {
-  const files = data.allMdx.nodes;
+  const posts = data.allMdx.nodes;
 
   return (
     <Layout pageTitle="Strawberries Posts">
-      <ul>
-        {files.map(({ id, frontmatter }) => (
-          <li key={id}>{frontmatter.title}</li>
-        ))}
-      </ul>
+      {posts.map(({ id, frontmatter }) => (
+        <article>
+          <h2 key={id}>{frontmatter.title}</h2>
+          <p>Posted: {frontmatter.date}</p>
+        </article>
+      ))}
     </Layout>
   );
 };
