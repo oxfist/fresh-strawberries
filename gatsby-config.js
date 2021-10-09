@@ -5,9 +5,23 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-image",
-    "gatsby-plugin-mdx",
     "gatsby-plugin-react-helmet",
+    "gatsby-remark-images",
     "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 300,
+              backgroundColor: "transparent",
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import Layout from "../components/layout";
 
@@ -8,10 +9,11 @@ const BlogPage = ({ data }) => {
 
   return (
     <Layout pageTitle="Strawberries Posts">
-      {posts.map(({ id, frontmatter }) => (
-        <article>
+      {posts.map(({ id, frontmatter, body }) => (
+        <article key={id}>
           <h2 key={id}>{frontmatter.title}</h2>
           <p>Posted: {frontmatter.date}</p>
+          <MDXRenderer>{body}</MDXRenderer>
         </article>
       ))}
     </Layout>
