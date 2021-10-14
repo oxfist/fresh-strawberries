@@ -1,11 +1,12 @@
 {
-  "name": "gatsby-tutorial",
+  "name": "fresh-strawberries",
   "version": "1.0.0",
   "private": true,
-  "description": "Gatsby Tutorial",
+  "description": "Strawberries are the best!",
   "author": "Andrés Quilodrán",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "strawberries"
   ],
   "scripts": {
     "develop": "gatsby develop",
