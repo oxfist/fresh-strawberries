@@ -54,3 +54,8 @@ header {
 .photo-credits {
   font-size: 0.8rem;
 }
+
+.barry {
+  display: flex;
+  justify-content: center;
+}
