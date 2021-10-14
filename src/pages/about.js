@@ -15,6 +15,7 @@ const AboutPage = () => {
         <StaticImage
           alt="Cute strawberry smiling and waving"
           src="../images/barry.png"
+          placeholder="tracedSVG"
         />
       </div>
     </Layout>
