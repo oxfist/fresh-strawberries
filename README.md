@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Strawberries! 🍓
 </h1>
 
 ## 🚀 Quick start
